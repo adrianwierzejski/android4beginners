@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Buttons</string>
+    <string name="ButtonTapped">Button %1$s was tapped</string>
+</resources>
