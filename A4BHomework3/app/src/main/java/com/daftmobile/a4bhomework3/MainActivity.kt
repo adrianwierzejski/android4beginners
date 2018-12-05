@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun onButtonClicked(viev:View){
 
-        val intent = Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI)
+        val intent = Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Email.CONTENT_URI)
         if (intent.resolveActivity(packageManager) != null) {
             startActivityForResult(intent, REQUEST_SELECT_CONTACT)
         }
@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
             putExtra(Intent.EXTRA_SUBJECT, subject)
 
         }
-        Log.d("myapp","sfsdfsdfs")
         if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
         }
